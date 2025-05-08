@@ -1,5 +1,3 @@
-//problem 1
-
 function formatString(input: string, toUpper?: boolean): string {
   if (toUpper || toUpper === undefined) {
     console.log(input.toUpperCase());
@@ -9,15 +7,12 @@ function formatString(input: string, toUpper?: boolean): string {
   return input.toLowerCase();
 }
 
-//problem 2
 function filterByRating(
   items: { title: string; rating: number }[]
 ): { title: string; rating: number }[] {
   console.log(items.filter((item) => item.rating > 4));
   return items.filter((item) => item.rating > 4);
 }
-
-//problem 3
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
   let result: T[] = [];
@@ -27,7 +22,6 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
   console.log(result);
   return result;
 }
-//problem 4
 
 class Vehicle {
   private _make: string;
@@ -52,8 +46,6 @@ class Car extends Vehicle {
   }
 }
 
-//problem 5
-
 function processValue(value: string | number): number {
   if (typeof value === "string") {
     console.log(value.length);
@@ -63,7 +55,7 @@ function processValue(value: string | number): number {
     return value * 2;
   }
 }
-//problem 6
+
 interface Product {
   name: string;
   price: number;
@@ -83,7 +75,6 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
   return maxItem;
 }
 
-//problem 7
 enum Day {
   Sunday,
   Monday,
@@ -104,8 +95,6 @@ function getDayType(day: Day): "Weekday" | "Weekend" {
   }
 }
 
-//problem 8
-
 async function squareAsync(n: number): Promise<number> {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -117,5 +106,3 @@ async function squareAsync(n: number): Promise<number> {
     }, 1000);
   });
 }
-
-squareAsync(4).then((result) => console.log(result));
